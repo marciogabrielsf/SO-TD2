@@ -1,3 +1,14 @@
+# Introdução
+
+Este programa funciona com duas bibliotecas do linux, o audit e o iWatch.
+
+Para instalar-las, utilize os seguintes comandos no terminal:
+
+```
+sudo apt-get install auditd audispd-plugins
+apt-get install iwatch
+```
+
 # QUANDO FOR INICIAR FAÇA ISSO:
 
 Apague todos os logs antigos do audit com ```sudo rm /var/log/audit/*```
