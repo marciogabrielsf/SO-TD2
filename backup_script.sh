@@ -42,9 +42,11 @@ generate_log()
 
         type=$(echo "$line" | grep -oP '(?<=type=)[^[:space:]]+') #dá um grep na linha e filtra apenas o tipo.
         date=$(echo "$line" | grep -oP '\d{2}/\d{2}/\d{4} \d{2}:\d{2}:\d{2}') #dá um grep na linha e filtra apenas a data.
+        ppid=$(echo "$line" | grep -oP '(?<=ppid=)[^[:space:]]+') #dá um grep na linha e filtra apenas o ppid.
         pid=$(echo "$line" | grep -oP '(?<=\s)pid=[0-9]+' | cut -d= -f2) #dá um grep na linha e filtra apenas o pid.
     
-    echo "Evento detectado: Date: $date | Type: $type | PID: $pid" >> log.txt #escreve no arquivo log o evento.
+    echo "Evento detectado: Date: $date | Tipo: $type | PPID: $ppid | PID: $pid" >> log.txt #escreve no arquivo log o evento.
+    # echo "Evento: $filtered_log" | grep "SYSCALL" >> log.txt
     done
 }
 
