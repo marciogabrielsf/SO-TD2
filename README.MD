@@ -11,6 +11,8 @@ apt-get install iwatch
 
 # QUANDO FOR INICIAR FAÇA ISSO:
 
+Primeiramente inicie o serviço do audit com ```sudo service auditd start```
+
 Apague todos os logs antigos do audit com ```sudo rm /var/log/audit/*```
 Em seguida reinicie o serviço do audit com: ```sudo service auditd rotate```
 
